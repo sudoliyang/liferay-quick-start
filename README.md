@@ -111,8 +111,28 @@ This is a problem about in the liferay-plugins-sdk-6.2/**build.properties**
 And satart a new project will be ok.  
 
 ## MySQL 
+Use homebrew install MySQL and MySQLWorkbench  
+
+	brew install mysql 
+	brew cask install mysqlworkbench
+
+### Usage 
+	
+	mysql.server status    # check mysql server status 
+	mysql.server start     # start server 
+
+enter mysql console 
+	
+	mysql -u root -p       # and enter will enter the mysql console 
+
 
 ## Ant
+Use homebrew install Ant 
+	
+	brew install ant
 
-## Maven
 
+## Maven  
+Use homebrew install maven 
+
+	brew install maven 
