@@ -8,7 +8,8 @@ Installation Liferay and setup the environment
 - [Liferay](#liferay)  
 	- [MySQL](#mysql)  
 	- [Ant](#ant)  
-	- [Maven](#maven)  
+	- [Maven](#maven)
+	- [Debug](#debug)  
 
 ## Homebrew 
 ### install homebrew 
@@ -117,7 +118,7 @@ Use homebrew install MySQL and MySQLWorkbench
 	brew cask install mysqlworkbench
 
 ### Usage 
-	
+
 	mysql.server status    # check mysql server status 
 	mysql.server start     # start server 
 
@@ -136,3 +137,23 @@ Use homebrew install Ant
 Use homebrew install maven 
 
 	brew install maven 
+
+
+
+## Debug
+
+### java.lang.OutOfMemoryError: PermGen space
+if you get this error in liferay probably java runtime memory is too small  
+in the Eclipse you can config it.  
+
+![liferay-run-config](image/liferay-run-config.png)
+
+config the arguments  
+
+	-Xmx2048m
+	-XX:MaxPermSize=256m
+
+![liferay-run-config-arguments](image/liferay-run-config-arguments.png)
+
+if you are a deploy version config it in tomcat/bin/setenv.sh (in windows is setenv.bat)
+
